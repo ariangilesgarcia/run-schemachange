@@ -1,0 +1,11 @@
+name: 'Run schemachange'
+description: 'Run migrations using the schemachange database change management tool'
+inputs:
+  config-folder:
+    description: 'Config folder'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args: ["-f", "${{ inputs.config-folder }}"]
