@@ -2,8 +2,9 @@ name: 'Run schemachange'
 description: 'Run migrations using the schemachange database change management tool'
 inputs:
   config-folder:
-    description: 'Config folder'
-    required: true
+    description: 'Config folder (where the schemachange-config.yml file is located)'
+    required: false
+    default: ./
 
 runs:
   using: 'docker'
